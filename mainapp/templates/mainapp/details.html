@@ -1,0 +1,57 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs"><br><br><br>
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Details Page</h2>
+          <ol>
+            <li><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <!-- <li>Portfolio Details</li> -->
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-md-6" id="container-border" >
+            <div class="owl-carousel portfolio-details-carousel">
+              {% for p in photos %}
+              <img src="{{p.image.url}}" class="img-fluid active" alt="" style="height: 350px; width: 700px;">
+              {% endfor %}
+            </div>
+            <h3 style="text-decoration: underline;"><b>Beneficiary</b></h3>
+            <p>{{post.benefitiary}}</p>
+            <h3 style="text-decoration: underline;"><b>Location</b></h3>
+            <p>{{post.location}}</p>
+          </div>
+          <div class="col-md-6">
+            <h3 style="text-decoration: underline;"><b>Description</b></h3>
+            <p>{{post.description}}</p>
+            <h3 style="text-decoration: underline;"><b>Point of Contact</b></h3>
+            <p>{{post.point_of_contact}}</p>
+            <h3 style="text-decoration: underline;"><b>Status</b></h3>
+            <p>{{post.status}}</p>
+          </div>
+        </div>
+      </div><br><br><br><br>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'mainapp/footer.html' %}
+
+  {% endblock content %}

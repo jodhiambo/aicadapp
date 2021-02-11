@@ -1,0 +1,275 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+
+<style>
+
+#container-border {
+  border-width: 0px;
+  border-color: #000;
+  border-style: solid;
+  background: #fff;
+}
+</style>
+
+
+<!-- ======= Team Section ======= -->
+<section id="team">
+  <div class="container" data-aos="fade-up"><br><br><br><br><br>
+    <div class="container-fluid">
+      <header class="section-header">
+        <h3 class="section-title">Message from The Chairman</h3>
+      </header>
+      <div class="row">
+        <div class="col-md-4" id="container-border">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <img src="{% static 'assets/img/board/nabukwesi.png' %}" class="img-fluid" style="width: 100%; height: auto;">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>AMB. Simon Nabukwesi</h4>
+                  <span>Principal Secretary,State Department for University Education and Research</span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+          <p class="text-center">Firefox clears your search and browsing history when you
+             quit the app or close all Private Browsing tabs and windows. While this doesn’t
+              make you anonymous to websites or your internet service provider,
+             it makes it easier to keep what you do online private from anyone else who uses this computer.</p>
+             <p class="text-center">Firefox clears your search and browsing history when you
+                quit the app or close all Private Browsing tabs and windows. While this doesn’t
+                 make you anonymous to websites or your internet service provider,
+                it makes it easier to keep what you do online private from anyone else who uses this computer.</p>
+                <p class="text-center">Firefox clears your search and browsing history when you
+                   quit the app or close all Private Browsing tabs and windows. While this doesn’t
+                    make you anonymous to websites or your internet service provider,
+                   it makes it easier to keep what you do online private from anyone else who uses this computer.</p>
+        </div>
+   </div>
+</div><br><br><br><br>
+
+<header class="section-header">
+  <h3 class="section-title">Board Members</h3>
+</header>
+    <div class="row">
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/nabukwesi.png' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>AMB. Simon Nabukwesi</h4>
+              <span>Principal Secretary,State Department for University Education and Research</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/kakooza.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Mr. Alex Kakooza</h4>
+              <span>Permanent Secretary, Ministry of Education and Sport, Uganda</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'assets/img/board/akwilapo.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Dr. Leonard Douglas Akwilapo</h4>
+              <span>Permanent Secretary Ministry of Education, Science and Technology, Uganda</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="300">
+          <img src="{% static 'assets/img/board/dorothy.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Ms. Dorothy N.O Kimeu, MBS</h4>
+              <span>Director of Administration in the National Treasury, Kenya</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="400">
+          <img src="{% static 'assets/img/board/tutuba.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Mr. Emanuel Tutuba Mpawe</h4>
+              <span> Assistant Commissioner for Budget-Expenditure Tracking and Performance Monitoring, Tanzania</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/keneth.png' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Mr. Kenneth Mugambe</h4>
+              <span>Representing Permanent Secretary of Finance, Uganda</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/bisanda.png' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Prof. Elifas Tozo Bisanda</h4>
+              <span>Vice Chancellor, The Open University of Tanzania</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/julius.png' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Prof. Julius Omondi Nyabundi</h4>
+              <span>Vice Chancellor, Maseno University</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/kampala.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>OWEK.AMB.AL HAJ. Prof. Badru D. Kateregga</h4>
+              <span>The founding Vice Cheancellor, Kampala University</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/komori.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Mr. Katsutoshi Komori</h4>
+              <span>Chief Representative, Kenya Office, Japan International Cooperation Agency (JICA)</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/Aloys_Mvuma.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Prof. Aloys Ntanturo Mvuma</h4>
+              <span>Vice Chancellor, Mbeya University of Science and Technology</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'assets/img/board/byarugaba.jpg' %}" class="img-fluid" alt="" style="width:100%; height:350px">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Prof. Dominic Byarugaba</h4>
+              <span>The Executive Director, AICAD</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Team Section -->
+
+
+{% include 'mainapp/footer.html' %}
+
+{% endblock content %}

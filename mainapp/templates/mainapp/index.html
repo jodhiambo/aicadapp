@@ -1,0 +1,215 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url('../../static/assets/img/intro-carousel/1.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/2.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/3.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/4.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/5.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/6.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../../static/assets/img/intro-carousel/7.jpg');">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">some title</h2>
+                <p class="animate__animated animate__fadeInUp">some litrature.</p>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Intro Section -->
+
+  <main id="main">
+
+    <!-- ======= Portfolio Section ======= -->
+
+    <section id="portfolio" class="section-bg">
+      <header class="section-header">
+        <h3 class="section-title">Our Projects</h3>
+      </header>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class=" col-lg-12">
+            {% for tag in the_tags.all %}
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">{{tag}}</li>
+              </ul>
+              {% endfor %}
+          </div>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-display="100">
+          <div class="row">
+            {% for post in the_posts %}
+            <div class="col-sm-4 card-group">
+              <div class="card mt-5">
+                <a href="{% url 'mainapp:details' post.id %}">
+                  <img src="{{post.image.url}}" class="card-img-top" alt="" style="height:200px;width:100%;">
+                </a>
+                <div class="card-body">
+                  <a href="{% url 'mainapp:details' post.id %}">
+                    <h4 class="card-title" style="color: #1b3956; text-decoration:center;">{{post.title|lower}}</h4>
+                  </a>
+                  <p class="card-text">{{post.location}}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"><a href="{% url 'mainapp:details' post.id %}"><button class="btn btn-success btn-sm btn-block">View Details</button></a></small>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+    </section><!-- End Portfolio Section -->
+
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Facts</h3>
+          <p style="font-size: 18px !important; color:white;">Over the years sice the inception of aicad back in 2002, we have manage to reach out and partner with many organizations in different levels.</p>
+        </header>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">550</span>
+            <p>Activities</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Partners</p>
+          </div>
+
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">58</span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Our Clients Section ======= -->
+    <section id="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>Our Partners</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <!-- {% for p in patners %}
+            <a href="{{ p.external_url }}" target="_blank"><img src="{{p.image.url}}" alt=""></a>
+          {% endfor %} -->
+          <a href="https://udom.ac.tz/" target="_blank"><img src="{% static 'assets/img/clients/dodoma.png' %}" alt=""></a>
+          <a href="http://www.ku.ac.ke/" target="_blank"><img src="{% static 'assets/img/clients/kenyatta.png' %}" alt=""></a>
+          <a href="https://www.maseno.ac.ke/" target="_blank"><img src="{% static 'assets/img/clients/maseno.png' %}" alt=""></a>
+          <a href="https://www.must.ac.ug/" target="_blank"><img src="{% static 'assets/img/clients/mbarara.png' %}" alt=""></a>
+          <a href="https://www.uonbi.ac.ke/" target="_blank"><img src="{% static 'assets/img/clients/uon.jpg' %}" alt=""></a>
+          <a href="http://www.mmust.ac.ke/" target="_blank"><img src="{% static 'assets/img/clients/muliro.png' %}" alt=""></a>
+          <a href="https://www.mak.ac.ug/" target="_blank"><img src="{% static 'assets/img/clients/makerere.png' %}" alt=""></a>
+          <a href="http://www.jkuat.ac.ke/" target="_blank"><img src="{% static 'assets/img/clients/jkuat.png' %}" alt=""></a>
+
+
+
+
+
+
+
+          <!-- <img src="{% static 'assets/img/clients/client-8.png' %}" alt=""> -->
+        </div>
+
+      </div>
+    </section>
+    <!-- End Our Clients Section -->
+  </main><!-- End #main -->
+
+{% include 'mainapp/footer.html' %}
+
+{% endblock content %}

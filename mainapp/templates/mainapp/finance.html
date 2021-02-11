@@ -1,0 +1,71 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <br><br><br>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Administration and Finance Division</h2>
+          <ol>
+            <li><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <li><a href="{% url 'mainapp:research' %}">Research & Development</a></li>
+            <li><a href="{% url 'mainapp:training' %}">Training & Extension</a></li>
+            <li><a href="{% url 'mainapp:information' %}">Information Network & Documentation</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+
+        <div class="portfolio-description">
+          <div class="row">
+            <div class="col-md-4" id="container-border">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <img src="{% static 'assets/img/directors/odongo.jpg' %}" class="img-fluid" style="width:100%; height:300px;">
+                  <div class="member-info">
+                    <div><br>
+                      <h4>Dr. Benson Odongo</h4>
+                      <span>Ag. Administration and Finance Director</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+              <p class="text-center">The Administration and Finance Division is the support division of the Institute with a
+                mandate of providing financial and administrative support.</p>
+                <p class="text-center">The Division also handles all the resources at the
+                  Institute and this includes human and physical resources.</p>
+                 <p class="text-center">The Administration and Finance Division manages the Institute’s facilities such as Guesthouse,
+                    Computer Laboratories, Seminar Rooms, Assembly Hall, Fitness Centre, Cyber Café, among others.
+                     The facilities, which are situated at a serene environment, are also available for hire.</p>
+
+            </div>
+       </div>
+       <header class="section-header">
+         <h3 class="section-title">Activities</h3>
+       </header>
+          <h2>some litrature here</h2>
+          <p>
+            something.something.something.something.something.something.something.something.
+          </p>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'mainapp/footer.html' %}
+
+  {% endblock content %}

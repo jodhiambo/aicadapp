@@ -1,0 +1,70 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+<!-- ======= About Us Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+    <br><br><br>
+    <header class="section-header">
+      <h3>About Us</h3>
+    </header>
+      <p>
+        African Instuitute for Capacity Development (AICAD) is a regional body established by Charter and subscription by the Governments of the Republic of Kenya, the United Republic of Tanzania and the Republic of Uganda dated 10 November, 2003.
+      </p>
+      <p>
+        It was established in the year 2000 with the assistance of the Japanese Government through Japan International Co-operation Agency and is registered in Kenya as a Company Limited by guarantee, Certificate No. C.98855 dated 11th June, 2002.
+      </p>
+      <p>
+        African Institute for Capacity Development (AICAD) has privilages and Immunities under the Privilages and Immunities Act, Cap. 179,(Laws of Kenya) - Legal Notice No. 18 dated 5th February, 2008.
+      </p>
+
+
+    <div class="row about-cols">
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-col">
+          <div class="img">
+            <img src="{% static 'assets/img/about-mission.jpg' %}" alt="" class="img-fluid">
+            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Mission</a></h2>
+          <p>
+            Linking knowledge to application within communities in order to reduce poverty in patner countries in Africa.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-col">
+          <div class="img">
+            <img src="{% static 'assets/img/about-plan.jpg' %}" alt="" class="img-fluid">
+            <div class="icon"><i class="ion-ios-list-outline"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Plan</a></h2>
+          <p>
+            Ensure poverty reduction in Africa through collaborations with other stakeholders in innovation, research and training.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="about-col">
+          <div class="img">
+            <img src="{% static 'assets/img/about-vision.jpg' %}" alt="" class="img-fluid">
+            <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Vision</a></h2>
+          <p><br>
+            Committed to be a leading African Institute in building human capacity for poverty reduction.
+          </p>
+        </div>
+      </div>
+
+  </div>
+</section><!-- End About Us Section -->
+
+{% include 'mainapp/footer.html' %}
+
+{% endblock content %}

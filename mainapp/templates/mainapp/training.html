@@ -1,0 +1,94 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <br><br><br>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Training and Extension Division</h2>
+          <ol>
+            <li><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <li><a href="{% url 'mainapp:finance' %}">Administration & finance</a></li>
+            <li><a href="{% url 'mainapp:research' %}">Research & Development</a></li>
+            <li><a href="{% url 'mainapp:information' %}">Information Network & Documentation</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4" id="container-border">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'assets/img/directors/wakhu.jpg' %}" class="img-fluid" alt="" style="width:100%; height:300px;">
+                <div class="member-info">
+                  <div><br>
+                    <h4>Mr. Patrick Wakhu</h4>
+                    <span>Training and Extension Director</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-8">
+            <p class="text-center">Training and Extension (T &E) activities are one of the core functions of AICAD,
+              aimed at giving people need driven skills and knowledge for socio economic development in the African region.</p>
+               <p class="text-center">Training is carried out at grassroots, in-country and regional levels. AICAD conducts
+                  need-driven training programmes that target beneficiaries that are carefully selected to ensure maximum
+                  return for both those trained and the groups from which they are drawn.</p>
+                  <p class="text-center">T &E programmes draw from Research and Development (R & D)
+                     activities in addition to the needs established within the community.
+                     The trainings involve workshops, seminars and short modules ranging from 3 days to 5 weeks.
+                      Extension is carried out through collaborating ministries and institutions, and also monitoring activities.</p>
+                      <p>AICAD programmes are unique because they draw on expertise form a cross section of the institutions
+                         of excellence in the region: the public sector, NGOs, private institutions, CBOs who collaborate
+                          in the identification of needs, programme development, execution and follow up. The Institute
+                           programmes give knowledge and skills that are immediately usable by trainees.</p>
+          </div>
+     </div>
+
+        <div class="portfolio-description">
+            <header class="section-header">
+              <h3 class="section-title">Activities</h3>
+            </header>
+              <div class="container" data-aos="fade-up" data-aos-display="100">
+                <div class="row">
+                  {% for post in the_posts %}
+                  <div class="col-sm-4 card-group">
+                    <div class="card mt-5">
+                      <a href="{% url 'mainapp:details' post.id %}">
+                        <img src="{{post.image.url}}" class="card-img-top" alt="" style="height:200px;width:100%;">
+                      </a>
+                      <div class="card-body">
+                        <a href="{% url 'mainapp:details' post.id %}">
+                          <h4 class="card-title" style="color: #1b3956; text-decoration:center;">{{post.title|lower}}</h4>
+                        </a>
+                        <p class="card-text">{{post.location}}</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted"><a href="{% url 'mainapp:details' post.id %}"><button class="btn btn-success btn-sm btn-block">View Details</button></a></small>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><br><br><!-- End #main -->
+
+  {% include 'mainapp/footer.html' %}
+
+  {% endblock content %}

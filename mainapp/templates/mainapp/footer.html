@@ -1,0 +1,64 @@
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          <h3>Aicad</h3>
+          <p>We partner with goverments within the East African region,
+            educational institutions and other relevant institutions in reseach and development
+             to help elevate poverty within our boarders and beyond.</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <!-- <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li> -->
+            <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'mainapp:about' %}">About us</a></li>
+            <!-- <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li> -->
+            <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'mainapp:privacy' %}" target="_blank">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            aicad street <br>
+            P.O. BOX 46179, 00100 <br>
+            GPO, Nairobi,Kenya <br>
+            <strong>Tel:</strong> +154 726-610-402<br>
+            <strong>Email:</strong> aicad@aicad.or.ke<br>
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Get our monthly newsletter right to you email</p>
+          <form action="" method="post">{% csrf_token %}
+            <input type="email" name="email" placeholder="enter email address"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span><script>
+        document.write(new Date().getFullYear());
+      </script></span></strong>. African Institute for Capacity Development
+    </div>
+  </div>
+</footer><!-- End Footer -->

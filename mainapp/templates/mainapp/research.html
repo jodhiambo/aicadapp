@@ -1,0 +1,97 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <br><br><br>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Research and Development Division</h2>
+          <ol>
+            <li><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <li><a href="{% url 'mainapp:finance' %}">Administration & finance</a></li>
+            <li><a href="{% url 'mainapp:training' %}">Training & Extension</a></li>
+            <li><a href="{% url 'mainapp:information' %}">Information Network & Documentation</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-description">
+
+          <div class="row">
+            <div class="col-md-4" id="container-border">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <img src="{% static 'assets/img/directors/odongo.jpg' %}" class="img-fluid" alt="" style="width:100%; height:300px;">
+                  <div class="member-info">
+                    <div><br>
+                      <h4>Dr. Benson Odongo</h4>
+                      <span>Research and Development Director</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+              <p class="text-center">R&D activities focus on the coordination
+                 of applied research, particularly those that address alleviation of poverty in the communities.</p>
+                 <p class="text-center">Major methodologies applied to accomplish the assignments are:
+                    (1) making calls for proposals and providing funds for the work;
+                    (2) monitoring progress of the activities, and evaluating impact of R&D outputs on users;
+                     (3) conducting workshops; and (4) coordinating the documentation of research findings.</p>
+                    <p class="text-center">AICAD puts emphasis on research proposals which methodologies effectively
+                       involve multiple stakeholders, such as: Universities and Research Institutions, the major
+                        resources for technology generation and documentation of experience; practicing professionals
+                         in various disciplines/sectors, and communities, which possess indigenous knowledge and social
+                          experience.</p>
+            </div>
+       </div><br><br>
+          <div class="row">
+            <div class="col-md-4">
+              <header class="section-header">
+                <h3 class="section-title">Objectives</h3>
+              </header>
+              <p>Identification of R&D needs of communities and industries</p>
+              <p>Implementation of R&D activities</p>
+              <p>Dissemination of R&D outputs to many users</p>
+              <p>Fostering linkage with stakeholders involved in the technology generation to promotion for poverty reduction</p>
+            </div>
+            <div class="col-md-4" id="container-border">
+              <header class="section-header">
+                <h3 class="section-title">Research Themes</h3>
+              </header>
+              <p>Food Production and Processing, Environmental conservation <br>
+                 Water Resource Management and Conservation, Development of small and medium scale enterprise
+                 <br> Community Development, Development of Low Cost Housing and Energy Supply,Food Security</p>
+              <p>Health Equity <br>
+                Industrialization Process and Policy Implementation and Socio-Economic aspects of Development</p>
+            </div>
+            <div class="col-md-4" id="container-border">
+            <header class="section-header">
+              <h3 class="section-title">Target Group</h3>
+            </header>
+            <p>Community members, such as, farmers and small-medium scale entrepreneurs</p>
+              <p>Transition groups: Local Government authorities, NGOs and CBOs</p>
+              <p>Institutions of higher learning: Universities and other national research systems</p>
+           </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'mainapp/footer.html' %}
+
+  {% endblock content %}

@@ -1,0 +1,45 @@
+
+{% load static %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+  <div class="container-fluid">
+
+    <div class="row justify-content-center">
+      <div class="col-xl-11 d-flex align-items-center">
+        <a href="{% url 'mainapp:index' %}" class="logo mr-auto"><img src="{% static 'assets/img/favicon1.png' %}" alt="" class="img-fluid"></a>
+        <h2 class="logo mr-auto"><a href="{% url 'mainapp:index' %}" style="color: green;!important">AICAD</a></h2>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="{% url 'mainapp:index' %}" class="logo mr-auto"><img src="{% static 'assets/img/favicon1.png' %}" alt="" class="img-fluid"></a> -->
+
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="#"><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <li><a href="{% url 'mainapp:about' %}">About Us</a></li>
+            <!-- <li><a href="#services">Services</a></li> -->
+            <li class="drop-down"><a href="">Divisions</a>
+              <ul>
+                <li><a href="{% url 'mainapp:training' %}">Training and Extension</a></li>
+                <li><a href="{% url 'mainapp:research' %}">Research & Development</a></li>
+                <li><a href="{% url 'mainapp:finance' %}">Administration & Finance</a></li>
+                <li><a href="{% url 'mainapp:information' %}">Information Network & Documentation</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'facilities:index' %}">Facilities</a></li>
+            <li><a href="{% url 'mainapp:board' %}">Board Members</a></li>
+            <li class="drop-down"><a href="">Country Offices</a>
+              <ul>
+                <li><a href="{% url 'mainapp:kenya' %}">Kenya (KCO)</a></li>
+                <li><a href="{% url 'mainapp:uganda' %}">Uganda (UCO)</a></li>
+                <li><a href="{% url 'mainapp:tanzania' %}">Tanzania (TCO)</a></li>
+              </ul>
+            </li>
+            <!-- <li><a href="#contact">Contact Us</a></li> -->
+
+          </ul>
+        </nav><!-- .nav-menu -->
+      </div>
+    </div>
+
+  </div>
+</header><!-- End Header -->

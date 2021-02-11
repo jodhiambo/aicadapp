@@ -1,0 +1,98 @@
+
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <br><br><br>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Information Network and Documentation</h2>
+          <ol>
+            <li><a href="{% url 'mainapp:index' %}">Home</a></li>
+            <li><a href="{% url 'mainapp:finance' %}">Administration & finance</a></li>
+            <li><a href="{% url 'mainapp:training' %}">Training & Extension</a></li>
+            <li><a href="{% url 'mainapp:research' %}">Research & Development</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-description">
+          <div class="row">
+            <div class="col-md-4" id="container-border">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <img src="{% static 'assets/img/directors/byarugaba.jpg' %}" class="img-fluid" alt="" style="width:100%; height:300px;">
+                  <div class="member-info">
+                    <div><br>
+                      <h4>Prof. Dominic Byarugaba</h4>
+                      <span>Ag. Information Network and Documentation Director</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+              <p class="text-center">Information, Network and Documentation (IN&D)
+                 Division collects, processes, stores, retrieves and disseminates
+                 information. Information patterns are collected from R&D Division,
+                 university research units and other institutions in the region and beyond on
+                causes and effects of poverty and the means of combating it.</p>
+                 <p class="text-center">The processed information is repackaged in
+                   various dissemination instruments and used by T&E in training and
+                   imparting communities with knowledge and skills necessary for poverty reduction and development.</p>
+                    <p class="text-center">The division facilitates publication of various documents of the Institute,
+                       as well as production and dissemination of audio-visual materials. It runs an electronic/reference
+                        library at the Institute, together with information networking and resource sharing with
+                         the participating institutions.</p>
+            </div>
+       </div>
+       <!-- <header class="section-header">
+         <h3 class="section-title">Activities</h3>
+       </header> --><br>
+       <div class="row">
+         <div class="col-md-4">
+           <header class="section-header">
+             <h3 class="section-title">Objectives</h3>
+           </header>
+           <p>Make information readily available in appropriate consumable and transferable formats.</p>
+           <p>Repackage information in all possible media for dissemination bearing in mind the conditions of Africa</p>
+           <p>Network the institutions, individual groups and communities and cause information to flow forth and back among all the targets.</p>
+           <p>Disseminate information using all possible media: print, multi-media and training and extension work.</p>
+         </div>
+         <div class="col-md-4" id="container-border">
+           <header class="section-header">
+             <h3 class="section-title">target groups</h3>
+           </header>
+           <p>The academicians in institutions of higher learning and research institutes</p>
+           <p>The Government departments where information can facilitate planning, decision making and implementation    for poverty reduction and development</p>
+           <p>The Extension workers who train and facilitate of community members and facilitate implementation in on  poverty reduction and development</p>
+           <p>The Communities where the information facilitate proper project formulation and implementation for poverty reduction and development.</p>
+         </div>
+         <div class="col-md-4" id="container-border">
+         <header class="section-header">
+           <h3 class="section-title">database</h3>
+         </header>
+         <p>The division manages the poverty database- Poverty Alleviation Information Knowledge Systems (PAIKS)
+           which facilitates information sharing.</p>
+           <p>The contents of PAIKS are organized from the key areas
+           of information sources: Research Findings, Expert/Professional Profiles, Institutional Profiles
+          and Training Themes from East African region.</p>
+        </div>
+       </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'mainapp/footer.html' %}
+
+  {% endblock content %}
