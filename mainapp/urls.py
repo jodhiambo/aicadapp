@@ -15,6 +15,7 @@ urlpatterns = [
     path('tanzania/', views.tanzania, name='tanzania'),
     path('uganda/', views.uganda, name='uganda'),
     path('privacy/', views.privacy, name='privacy'),
+    path('adverts/', views.advert, name='advert'),
 
 
 

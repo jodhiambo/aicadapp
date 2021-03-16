@@ -48,3 +48,10 @@ class Patner(models.Model):
 
     def __str__(self):
         return self.external_url
+
+class Advert(models.Model):
+    title = models.CharField(max_length=100)
+    pdf = models.FileField(upload_to='pdf/%Y/%m/%d')
+
+    def __str__(self):
+        return self.title

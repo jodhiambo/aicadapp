@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Project, ProjectImage
+from .models import Project, ProjectImage, Advert, Patner
+
+#imaginary function to handle an uploaded file
+# from somewhere import handle_upload_file
 
 # Create your views here.
 
@@ -60,7 +63,7 @@ def uganda(request):
     return render(request, 'mainapp/uganda.html')
 
 def patner(request):
-    patners = Patner.object.all()
+    patners = Patner.objects.all()
     context = {
     'patners':patners,
     }
@@ -68,3 +71,10 @@ def patner(request):
 
 def privacy(request):
     return render(request, 'mainapp/privacy_policy.html')
+
+def advert(request):
+    items = Advert.objects.all()
+    context = {
+    'items':items,
+    }
+    return render (request, 'mainapp/adverts.html', context)

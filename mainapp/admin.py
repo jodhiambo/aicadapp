@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Project, ProjectImage, Patner
+from .models import Project, ProjectImage, Patner, Advert
+
 
 # Register your models here.
 
@@ -22,3 +23,6 @@ class ProjectImageAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Patner)
+
+
+admin.site.register(Advert)
