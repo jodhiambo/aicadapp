@@ -17,8 +17,4 @@ urlpatterns = [
     path('privacy/', views.privacy, name='privacy'),
     path('adverts/', views.advert, name='advert'),
 
-
-
-
-
 ]

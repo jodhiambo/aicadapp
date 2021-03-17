@@ -51,6 +51,7 @@ class Patner(models.Model):
 
 class Advert(models.Model):
     title = models.CharField(max_length=100)
+    details = models.TextField()
     pdf = models.FileField(upload_to='pdf/%Y/%m/%d')
 
     def __str__(self):

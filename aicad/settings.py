@@ -136,5 +136,8 @@ MEDIA_URL = '/media/'
 
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+#ckeditor DJANGO_SETTINGS_MODULE
+
+
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
