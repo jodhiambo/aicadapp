@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_v&!8vs6i4vq0-n_aw2ois-7f2i5!#zu@tzw*e7vap2ha-%*-+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['aicad.aicad.com','aicadapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['aicad.aicad.com','aicadapp.herokuapp.com', '127.0.0.1', 'www.aicad.or.ke', 'aicad.or.ke']
 
 
 # Application definition
